@@ -1,0 +1,40 @@
+Data Binding
+-----------
+  Data in TS  => HTML
+
+  6 Types of Binding
+
+  1. String Interpolation
+      TS => HTML
+      {{}}
+
+  2. Property Binding
+      TS => HTML
+      [ ]
+      Expression: { }
+
+  3. Event Binding
+      TS => HTML
+      ()
+      $event
+
+  4. Two Way Binding
+      TS <=> HTML
+      [(ngModel)]
+
+  5. Custom Property Binding
+  6. Custom Event Binding
+
+====
+
+Cross Component Communication
+----
+    1. Parent to Child Comp Communication
+        Custom Property Binding
+
+    2. Child to Parent Comp Communication
+        2.1. Custom Event Binding       (child comp can send data to parent)
+        2.2. @ViewChild()               ( parent can access data from child)
+
+    3. Any to Any Comp Communication
+        Prereq: Services, Dependency Injection, RxJS / Observables, Subscription

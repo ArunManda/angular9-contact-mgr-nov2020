@@ -1,0 +1,56 @@
+Webapps
+----
+  1. Server Side Rendering / Traditional Webapps
+      1 Server
+        Front End - (HTML, CSS, JS) + Back End (Dotnet, java) + DB Query
+
+        index.php
+          <?php
+            echo '<h1>Success</h1>'
+          ?>
+
+        Resp: HTML, CSS, JS + Data
+
+      Disadvantages
+      ----
+        Page will refresh
+        Slower webpages
+        Heavy lifting
+        Higher Bandwidth Consumption
+        Expensive
+        Bad UX
+
+
+  2. Client Side Rendering / Single Page Apps/ Modern Webapps
+      2 Servers
+        1 Server for the Front End  - 4200 ( will develop this app - Single Page App in Angular)
+          HTML, CSS, JS
+          Resp: HTML, CSS, JS - waiting for the data
+
+        1 Server for the Back End  - 8080
+          Dot Net/ Java + DB Query
+          Resp: Data (JSON)
+
+      Characteristics of SPA
+      -----
+        1. Page should not refresh
+        2. URL Should change
+        3. History should be maintained
+        4. Retain Header and Footer
+        5. Main section should show updates
+        6. Active menu should be set
+        7. Page title should also be changed
+
+        Frameworks/Libraries:
+          Angular
+          React JS - library
+          VueJS
+
+      Advantages
+      ---
+        1. Page will not refresh
+        2. Faster webpages
+        3. Better UX
+        4. Workload shared b/w two servers
+        5. Less Bandwidth Consumption
+        6. Less Expensive

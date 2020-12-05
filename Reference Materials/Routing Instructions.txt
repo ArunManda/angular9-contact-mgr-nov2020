@@ -1,0 +1,59 @@
+SPA Characteristics
+-----
+1. Page should not refresh
+2. URL Should change
+3. History should be maintained
+4. Retain Header and Footer
+5. Main section should show updates
+6. Active menu should be set
+7. Page title should also be changed
+
+Routing
+====
+Step 0:
+  Identify the URL's
+
+  localhost:4200              -- Home
+  localhost:4200/concepts     -- Concepts
+  localhost:4200/contacts     -- Contact Manager
+  localhost:4200/about        -- About Us
+
+Step 1:
+  Let's setup the URL's in menu.comp.html
+  add proper href's
+
+Step 2:
+  Now, create the components for the URL's
+  ng g c home -is
+  ng g c concepts -is
+  ng g c contacts -is
+  ng g c about -is
+
+Step 3:
+  Configure the routes
+  in app-routing.module.ts
+
+Step 4:
+  In between header and footer, load the appropriate component.
+  add the following in app.comp.html
+  <router-outlet></router-outlet>
+
+Step 5:
+  Check the app! the component would be loaded in between header and footer.
+  But the page is refreshing. Let's fix it.
+  go to menu.comp.html
+  replace all href's with routerLink
+
+Step 6:
+  Check the app. It won't refresh the page. But, Active menu should be set
+  goto menu.comp.html
+  add routerLinkActive="active"  in all li's
+
+Step 7:
+  Now, Home menu will be active always.
+  in home menu's li add the following
+  [routerLinkActiveOptions]="{exact:true}"
+
+Step 8:
+  Todo: Work on Title
+  Prereq: Services, Dependency Injection
